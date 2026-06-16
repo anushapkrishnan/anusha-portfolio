@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anusha P Krishnan — Manager, Products · Accenture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:      #1A3C34;
+      --green-lt:   #2D6A5A;
+      --green-bg:   #EAF2EF;
+      --peach:      #C47D0E;
+      --peach-lt:   #E8A838;
+      --peach-bg:   #FEF7E6;
+      --cream:      #FFFFFF;
+      --white:      #FFFFFF;
+      --bg:         #FFFFFF;
+      --text:       #111A14;
+      --muted:      #6B7280;
+      --border:     rgba(0,0,0,0.07);
+      --shadow:     0 1px 16px rgba(0,0,0,0.04);
+      --shadow-lg:  0 8px 40px rgba(0,0,0,0.09);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg); color: var(--text);
+      line-height: 1.65; overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      padding: 0.85rem 2.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      background: #FFFFFF;
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-weight: 700;
+      color: var(--green); text-decoration: none;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 6rem 2.5rem 2.5rem;
+      background: var(--white); position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute;
+      top: -120px; right: -80px; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,60,52,0.07), transparent 70%);
+    }
+    .hero::after {
+      content: ''; position: absolute;
+      bottom: -80px; left: 10%; width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(232,168,56,0.07), transparent 70%);
+    }
+    .hero-inner {
+      max-width: 960px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 1.5rem; align-items: start; position: relative;
+    }
+    .hero-photo-wrap { order: 2; }
+    .hero-text { order: 1; position: relative; z-index: 2; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      background: var(--green-bg); border: 1px solid var(--green-lt);
+      color: var(--green); padding: 0.3rem 0.85rem; border-radius: 999px;
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; margin-bottom: 1.2rem;
+    }
+    .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+    h1.hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 700; line-height: 1.08; color: var(--green); margin-bottom: 0.3rem; letter-spacing: -0.01em;
+    }
+    .hero-title { font-size: 0.95rem; color: var(--muted); font-weight: 400; margin-bottom: 1.2rem; }
+    .hero-tagline {
+      font-size: 0.95rem; color: #333;
+      margin-bottom: 1.8rem; line-height: 1.8; font-weight: 300;
+    }
+    .hero-tagline strong { font-weight: 600; color: var(--green); }
+    .hero-cta { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .btn {
+      padding: 0.6rem 1.4rem; border-radius: 999px;
+      font-size: 0.82rem; font-weight: 600; font-family: 'DM Sans', sans-serif;
+      text-decoration: none; border: none; cursor: pointer; transition: all 0.22s;
+    }
+    .btn-primary { background: var(--green); color: #fff; box-shadow: 0 4px 16px rgba(26,60,52,0.28); }
+    .btn-primary:hover { background: #112B25; transform: translateY(-2px); }
+    .btn-secondary { background: transparent; color: var(--green); border: 1.5px solid var(--green-lt); cursor: pointer; }
+    .btn-secondary:hover { background: var(--green-bg); transform: translateY(-2px); }
+
+    .stat-strip {
+      display: grid; grid-template-columns: repeat(4,1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border); border-radius: 14px;
+      overflow: hidden; box-shadow: var(--shadow);
+    }
+    .stat-item { background: var(--white); padding: 0.9rem 0.5rem; text-align: center; cursor: pointer; transition: background 0.2s; }
+    .stat-item:hover { background: var(--green-bg); }
+    .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--green); }
+    .stat-label { font-size: 0.62rem; color: var(--muted); margin-top: 0.05rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; }
+
+    .hero-photo-wrap {
+      width: 170px; height: 170px; border-radius: 50%; padding: 4px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--green-lt), var(--peach-lt));
+      box-shadow: 0 12px 40px rgba(26,60,52,0.18);
+      margin-top: 10rem;
+    }
+    .hero-photo-wrap img {
+      width: 100%; height: 100%; border-radius: 50%;
+      object-fit: cover; object-position: center top; display: block;
+    }
+
+    /* ─── TAB BAR ─── */
+    .tab-bar {
+      position: sticky; top: 52px; z-index: 90;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      display: flex; justify-content: center;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    }
+    .tab-btn {
+      background: none; border: none; cursor: pointer;
+      padding: 0.85rem 1.8rem; font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem; font-weight: 500; color: var(--muted);
+      position: relative; transition: color 0.2s;
+    }
+    .tab-btn:hover { color: var(--green); }
+    .tab-btn.active { color: var(--green); font-weight: 600; }
+    .tab-btn.active::after {
+      content: ''; position: absolute;
+      bottom: 0; left: 50%; transform: translateX(-50%);
+      width: 28px; height: 2px; border-radius: 1px; background: var(--green);
+    }
+
+    /* ─── BOOK CONTAINER (shared across all tabs) ─── */
+    .tab-panel {
+      display: none; padding: 3rem 2.5rem 3.5rem;
+      min-height: 55vh;
+    }
+    .tab-panel.active { display: block; }
+    .panel-inner { max-width: 960px; margin: 0 auto; }
+
+    .section-tag {
+      display: inline-block; font-size: 0.68rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.22rem 0.7rem; border-radius: 999px; margin-bottom: 0.5rem;
+    }
+    h2.section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 700; line-height: 1.1; color: var(--text); margin-bottom: 0.4rem;
+    }
+    .section-sub { color: var(--muted); font-size: 0.9rem; font-weight: 300; max-width: 480px; margin-bottom: 2rem; }
+    .tag-green { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-lt); }
+    .tag-peach { background: var(--peach-bg); color: var(--peach); border: 1px solid var(--peach-lt); }
+
+    /* ─── THE BOOK — 3D page flip ─── */
+    .book-wrapper {
+      perspective: 1800px;
+      max-width: 680px; margin: 0 auto;
+    }
+    .book {
+      position: relative;
+      width: 100%;
+      min-height: 380px;
+    }
+    /* Each page */
+    .page {
+      position: absolute; top: 0; left: 0; right: 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px 18px 18px 4px;
+      padding: 2.5rem 2.5rem 2rem;
+      transform-origin: left center;
+      transform: rotateY(0deg);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 0;
+      box-shadow: var(--shadow);
+    }
+    /* Book spine edge */
+    .page::before {
+      content: ''; position: absolute;
+      top: 6px; left: 0; bottom: 6px; width: 3px;
+      background: linear-gradient(180deg, var(--green-lt), var(--peach-lt));
+      border-radius: 0 2px 2px 0;
+    }
+    /* Top accent line */
+    .page::after {
+      content: ''; position: absolute;
+      top: 0; left: 3px; right: 0; height: 2px;
+      border-radius: 0 18px 0 0;
+    }
+    .page-green::after  { background: linear-gradient(90deg, var(--green), var(--green-lt)); }
+    .page-peach::after  { background: linear-gradient(90deg, var(--peach), var(--peach-lt)); }
+    .page-mixed::after  { background: linear-gradient(90deg, var(--green), var(--peach-lt)); }
+
+    /* ACTIVE page — visible, on top */
+    .page.active {
+      opacity: 1; pointer-events: auto;
+      z-index: 5;
+      transform: rotateY(0deg) scale(1);
+      box-shadow: var(--shadow), -4px 0 8px rgba(0,0,0,0.03);
+    }
+
+    /* ── FLIP ANIMATIONS (keyframes only, no transitions on .page) ── */
+    .page.anim-flip-out-left {
+      z-index: 10;
+      animation: flipOutLeft 0.6s ease-in forwards;
+    }
+    .page.anim-flip-out-right {
+      z-index: 10;
+      animation: flipOutRight 0.55s ease-in forwards;
+    }
+    .page.anim-enter-from-right {
+      z-index: 5;
+      animation: enterFromRight 0.55s ease-out forwards;
+    }
+    .page.anim-enter-from-left {
+      z-index: 5;
+      animation: enterFromLeft 0.6s ease-out forwards;
+    }
+
+    @keyframes flipOutLeft {
+      0%   { transform: rotateY(0deg);    opacity: 1; box-shadow: var(--shadow); }
+      40%  { opacity: 1; box-shadow: 12px 6px 30px rgba(0,0,0,0.18); }
+      100% { transform: rotateY(-120deg); opacity: 0; box-shadow: 0 0 0 rgba(0,0,0,0); }
+    }
+    @keyframes flipOutRight {
+      0%   { transform: rotateY(0deg);   opacity: 1; }
+      100% { transform: rotateY(40deg);  opacity: 0; }
+    }
+    @keyframes enterFromRight {
+      0%   { transform: translateX(60px) scale(0.95); opacity: 0; }
+      100% { transform: translateX(0) scale(1);       opacity: 1; }
+    }
+    @keyframes enterFromLeft {
+      0%   { transform: rotateY(-80deg); opacity: 0; }
+      50%  { opacity: 0.6; }
+      100% { transform: rotateY(0deg);   opacity: 1; }
+    }
+
+    /* Page inner content styling */
+    .pg-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.8rem; font-weight: 600; color: var(--muted);
+      margin-bottom: 1.5rem; letter-spacing: 0.05em;
+    }
+    .pg-emoji { font-size: 2.2rem; margin-bottom: 0.8rem; }
+    .pg-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; font-weight: 700; color: var(--text); margin-bottom: 0.2rem;
+    }
+    .pg-subtitle {
+      font-size: 0.72rem; color: var(--muted); font-weight: 500;
+      letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 1rem;
+    }
+    .pg-body {
+      font-size: 0.92rem; color: #333; font-weight: 300; line-height: 1.85;
+      margin-bottom: 1.2rem;
+    }
+    .pg-body strong { font-weight: 600; color: var(--green); }
+    .pg-badge {
+      display: inline-block; font-size: 0.76rem; font-weight: 600;
+      padding: 0.28rem 0.8rem; border-radius: 999px;
+    }
+    .badge-green { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-lt); }
+    .badge-peach { background: var(--peach-bg); color: var(--peach); border: 1px solid var(--peach-lt); }
+
+    /* Bullet list inside pages */
+    .pg-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+    .pg-bullets li {
+      font-size: 0.88rem; color: #333; font-weight: 300;
+      padding-left: 1.2rem; position: relative; line-height: 1.75;
+    }
+    .pg-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--green); font-size: 0.7rem; top: 0.25rem; }
+
+    /* Award tags */
+    .pg-award {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      background: var(--peach-bg); border: 1px solid var(--peach-lt);
+      color: var(--peach); font-size: 0.72rem; font-weight: 600;
+      padding: 0.2rem 0.6rem; border-radius: 999px; margin-top: 0.5rem;
+    }
+
+    /* Navigation bar for flipping */
+    .book-nav {
+      display: flex; justify-content: center; align-items: center;
+      gap: 1.2rem; margin-top: 1.5rem;
+    }
+    .book-btn {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--white); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 1rem; color: var(--green);
+      box-shadow: var(--shadow); transition: all 0.2s;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .book-btn:hover { background: var(--green); color: #fff; transform: scale(1.08); }
+    .book-btn:disabled { opacity: 0.25; cursor: default; }
+    .book-btn:disabled:hover { background: var(--white); color: var(--green); transform: none; }
+    .book-counter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem; font-weight: 600; color: var(--muted); min-width: 44px; text-align: center;
+    }
+    .book-dots { display: flex; gap: 5px; justify-content: center; margin-top: 0.5rem; }
+    .book-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--green-lt); transition: all 0.3s; cursor: pointer; opacity: 0.5;
+    }
+    .book-dot.active { background: var(--green); transform: scale(1.35); opacity: 1; }
+
+    /* Keyboard hint */
+    .kb-hint {
+      text-align: center; margin-top: 0.6rem;
+      font-size: 0.68rem; color: #aaa; font-weight: 300;
+    }
+
+    /* ─── SKILLS — editorial layout ─── */
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem 3.5rem; }
+    .skill-block { margin-bottom: 0.5rem; }
+    .skill-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-weight: 700; color: var(--text);
+      margin-bottom: 0.35rem; padding-bottom: 0.35rem;
+      border-bottom: 1.5px solid var(--green-lt);
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .skill-label-icon { font-size: 0.95rem; }
+    .skill-list {
+      list-style: none; columns: 2; column-gap: 1.5rem;
+    }
+    .skill-list.single-col { columns: 1; }
+    .skill-list li {
+      font-size: 0.82rem; color: #333; font-weight: 300;
+      padding: 0.25rem 0; break-inside: avoid;
+      position: relative; padding-left: 0.9rem; line-height: 1.6;
+    }
+    .skill-list li::before {
+      content: ''; position: absolute; left: 0; top: 0.55rem;
+      width: 5px; height: 5px; border-radius: 50%; background: var(--green-lt);
+    }
+    .skill-list li strong { font-weight: 500; color: var(--green); }
+    .cert-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 12px; padding: 0.75rem 0.9rem; margin-bottom: 0.5rem;
+      display: flex; align-items: flex-start; gap: 0.6rem; box-shadow: var(--shadow);
+    }
+    .cert-icon { font-size: 0.95rem; flex-shrink: 0; }
+    .cert-name { font-weight: 600; color: var(--text); font-size: 0.82rem; }
+    .cert-by   { font-size: 0.7rem; color: var(--muted); font-weight: 300; }
+    .edu-card {
+      background: linear-gradient(135deg, var(--green-bg), rgba(232,245,238,0.3));
+      border: 1px solid var(--green-lt);
+      border-radius: 14px; padding: 1.1rem; margin-bottom: 0.75rem;
+    }
+    .edu-school { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 0.95rem; margin-bottom: 0.12rem; }
+    .edu-degree { font-size: 0.82rem; color: var(--muted); font-weight: 300; }
+    .edu-badge {
+      display: inline-block; background: var(--peach-bg); color: var(--peach);
+      border: 1px solid var(--peach-lt); font-size: 0.66rem; font-weight: 600;
+      padding: 0.12rem 0.5rem; border-radius: 999px; margin-top: 0.35rem;
+    }
+
+    /* ─── CONTACT ─── */
+    #panel-contact { background: linear-gradient(160deg, var(--green-bg) 0%, var(--peach-bg) 100%); }
+    .contact-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+    .contact-inner .section-title { margin-bottom: 0.4rem; }
+    .contact-inner .section-sub { margin: 0 auto 2rem; }
+    .contact-links { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+    .contact-link {
+      display: flex; align-items: center; gap: 0.45rem;
+      background: var(--white); border: 1px solid var(--border);
+      color: var(--text); text-decoration: none;
+      font-size: 0.82rem; font-weight: 500;
+      padding: 0.6rem 1.3rem; border-radius: 999px;
+      box-shadow: var(--shadow); transition: all 0.22s;
+    }
+    .contact-link:hover {
+      background: var(--green); color: #fff;
+      border-color: var(--green); transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(45,106,79,0.2);
+    }
+    .contact-link { cursor: pointer; pointer-events: auto; position: relative; z-index: 2; }
+
+    /* ─── JOURNEY TIMELINE ─── */
+    .journey-timeline {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-top: 0.5rem;
+    }
+    .jt-stops {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+      padding: 0;
+    }
+    .jt-bg-line {
+      position: absolute;
+      top: 6px; left: 10%; right: 10%;
+      height: 2px;
+      background: var(--green-bg);
+      border-radius: 2px;
+      z-index: 0;
+    }
+    .jt-progress-line {
+      position: absolute;
+      top: 6px; left: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--green), var(--green-lt));
+      border-radius: 2px;
+      z-index: 1;
+      width: 0%;
+      transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+    }
+    .jt-stop {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 0; cursor: pointer; z-index: 2; position: relative; flex: 1;
+    }
+    .jt-dot {
+      width: 13px; height: 13px; border-radius: 50%;
+      background: #fff; border: 2px solid var(--green-bg);
+      transition: all 0.35s; z-index: 3;
+    }
+    .jt-stop.visited .jt-dot { background: var(--green-lt); border-color: var(--green-lt); }
+    .jt-stop.active .jt-dot {
+      background: var(--green); border-color: var(--green);
+      box-shadow: 0 0 0 4px rgba(26,60,52,0.13);
+      transform: scale(1.28);
+    }
+    .jt-label { text-align: center; margin-top: 0.45rem; }
+    .jt-year {
+      font-size: 0.6rem; color: var(--muted); font-weight: 500;
+      display: block; white-space: nowrap;
+    }
+    .jt-stop.active .jt-year { color: var(--green); font-weight: 700; }
+    .jt-stop.visited .jt-year { color: var(--green-lt); }
+    .jt-role {
+      font-size: 0.55rem; color: #ccc; display: block;
+      white-space: nowrap; font-weight: 300; margin-top: 0.1rem;
+    }
+    .jt-stop.active .jt-role { color: var(--green-lt); }
+    .jt-stop.visited .jt-role { color: var(--muted); }
+
+    footer {
+      padding: 2rem 2.5rem 1.2rem; text-align: center;
+      border-top: 1px solid var(--border);
+      font-size: 0.72rem; color: var(--muted); background: var(--white); font-weight: 300;
+    }
+    .footer-journey { max-width: 960px; margin: 0 auto; }
+    .journey-svg { width: 100%; height: auto; }
+    /* footer animations handled by JS for cross-browser SVG support */
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; text-align: center; }
+      .hero-photo-wrap { order: 1 !important; width: 140px; height: 140px; margin: 0 auto 1rem; margin-right: auto; }
+      .hero-text { order: 2 !important; }
+      .hero-cta { justify-content: center; }
+      .stat-strip { grid-template-columns: repeat(2,1fr); }
+      .skills-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .skill-list { columns: 1; }
+      .tab-btn { padding: 0.75rem 0.9rem; font-size: 0.74rem; }
+      .page { padding: 1.8rem 1.5rem 1.5rem; }
+      .pg-title { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#" class="nav-logo" onclick="window.scrollTo({top:0,behavior:'smooth'});switchTab('impact');return false;">APK</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-photo-wrap">
+        <img src="githubAnuDP.jpeg" alt="Anusha P Krishnan" />
+      </div>
+      <div class="hero-text">
+        <div class="hero-badge"><span class="badge-dot"></span> Open to opportunities</div>
+        <h1 class="hero-name">Anusha P Krishnan</h1>
+        <p class="hero-title">Manager, Products &mdash; Accenture &mdash; Bengaluru, India</p>
+        <p class="hero-tagline">
+          The kind of PM who reads the architecture doc before the PRD.
+          10+ years shipping platforms — from a <strong>100K-user CDP</strong> to a
+          <strong>5-city pharma launch</strong> to a <strong>multi-region B2B marketplace</strong>.
+          I sit between engineering, data, and business, and I make the hard calls
+          that turn ambiguity into product. Currently learning, building, and working in
+          <strong>AI/data strategy</strong> and <strong>platform architecture</strong>
+          — passionate about adopting emerging tech and never done learning.
+        </p>
+        <div class="hero-cta">
+          <a href="#" class="btn btn-primary" onclick="switchTab('contact');return false;">Let's talk &rarr;</a>
+          <a href="#" class="btn btn-secondary" onclick="switchTab('journey');return false;">See my journey</a>
+        </div>
+      </div>
+    </div>
+    <div class="stat-strip" style="max-width:640px; margin:1.5rem auto 0;">
+      <div class="stat-item" onclick="switchTab('impact')"><div class="stat-num">100K+</div><div class="stat-label">Daily users</div></div>
+      <div class="stat-item" onclick="switchTab('impact')"><div class="stat-num">180K+</div><div class="stat-label">Hrs saved/yr</div></div>
+      <div class="stat-item" onclick="switchTab('impact')"><div class="stat-num">66%</div><div class="stat-label">Msg volume cut</div></div>
+      <div class="stat-item" onclick="switchTab('products')"><div class="stat-num">10</div><div class="stat-label">Days · AI platform</div></div>
+    </div>
+  </section>
+
+  <!-- TAB BAR -->
+  <div class="tab-bar" id="tabBar">
+    <button class="tab-btn active" onclick="switchTab('impact')">Impact</button>
+    <button class="tab-btn" onclick="switchTab('journey')">Journey</button>
+    <button class="tab-btn" onclick="switchTab('products')">Products</button>
+    <button class="tab-btn" onclick="switchTab('skills')">Skills</button>
+    <button class="tab-btn" onclick="switchTab('contact')">Contact</button>
+  </div>
+
+  <!-- ════════ IMPACT — 4 pages ════════ -->
+  <div class="tab-panel active" id="panel-impact" data-book="impact">
+    <div class="panel-inner">
+      <span class="section-tag tag-green">By the numbers</span>
+      <h2 class="section-title">Impact that ships.</h2>
+      <p class="section-sub">Real metrics from real products — flip through the highlights.</p>
+      <div class="book-wrapper">
+        <div class="book" data-book-id="impact">
+          <div class="page page-green active">
+            <div class="pg-num">01 / 04</div>
+            <div class="pg-emoji">⚡</div>
+            <div class="pg-title">66% Downstream Reduction</div>
+            <div class="pg-body">
+              Redesigned the core architecture of a globally deployed consumer data platform —
+              replaced 3× fanout with change-stream based group completion tracking,
+              enabling <strong>scalable integrations at 100K+ daily users</strong>.
+            </div>
+            <span class="pg-badge badge-green">Architecture · CDP · 100K+ users</span>
+          </div>
+          <div class="page page-peach">
+            <div class="pg-num">02 / 04</div>
+            <div class="pg-emoji">🤖</div>
+            <div class="pg-title">180K+ Hours Saved Annually</div>
+            <div class="pg-body">
+              Led product strategy for <strong>100+ enterprise automation use-cases</strong> at
+              a global FMCG. Improved operational efficiency by 40% across the organisation.
+            </div>
+            <span class="pg-badge badge-peach">Automation · RPA · Enterprise</span>
+          </div>
+          <div class="page page-green">
+            <div class="pg-num">03 / 04</div>
+            <div class="pg-emoji">🌏</div>
+            <div class="pg-title">5-City Pharma Launch</div>
+            <div class="pg-body">
+              Defined MVP for a pharma distribution platform from scratch.
+              Made the call to prioritise <strong>returns management as USP</strong> —
+              onboarded 50+ distributors at launch.
+            </div>
+            <span class="pg-badge badge-green">0→1 · PharmaHealth · MVP</span>
+          </div>
+          <div class="page page-peach">
+            <div class="pg-num">04 / 05</div>
+            <div class="pg-emoji">🏆</div>
+            <div class="pg-title">3× Champion of the Quarter</div>
+            <div class="pg-body">
+              Recognised Q1 2026, Q1 &amp; Q2 2025 at current role. Also awarded
+              <strong>Best Performing Employee</strong> in first 6 months of a consulting role.
+            </div>
+            <span class="pg-badge badge-peach">Recognition · Consistency</span>
+          </div>
+          <div class="page page-green">
+            <div class="pg-num">05 / 05</div>
+            <div class="pg-emoji">⚡</div>
+            <div class="pg-title">4–8 hrs → under 2 minutes</div>
+            <div class="pg-body">
+              Built a <strong>zero-cost AI proposal intelligence platform</strong> for Accenture's
+              200-person CGRT practice — solo, in 10 days. Credential search that took half
+              a working day now takes under 2 minutes. <strong>2,400 hours/year recovered</strong>
+              across the practice. Zero cloud infrastructure, zero IT dependency, zero budget.
+              Recognised at the CGRT Prompt-a-thon across 11 deliverables.
+            </div>
+            <span class="pg-badge badge-green">AI Product · 0→1 · 10 days · Accenture 2026</span>
+          </div>
+        </div>
+        <div class="book-nav">
+          <button class="book-btn" data-dir="-1" disabled>←</button>
+          <span class="book-counter">1 / 5</span>
+          <button class="book-btn" data-dir="1">→</button>
+        </div>
+        <div class="book-dots"></div>
+        <div class="kb-hint">← → arrow keys to flip</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ JOURNEY — 5 pages ════════ -->
+  <div class="tab-panel" id="panel-journey" data-book="journey">
+    <div class="panel-inner">
+      <span class="section-tag tag-green">My story</span>
+      <h2 class="section-title">The journey.</h2>
+      <p class="section-sub">Click any milestone on the path below, or use the arrows to move through each chapter.</p>
+
+      <!-- Journey Timeline Strip -->
+      <div class="journey-timeline">
+        <div class="jt-stops">
+          <div class="jt-bg-line"></div>
+          <div class="jt-progress-line" id="jt-progress"></div>
+          <div class="jt-stop active" onclick="goTo('journey',0)">
+            <div class="jt-dot"></div>
+            <div class="jt-label">
+              <span class="jt-year">2023 – Now</span>
+              <span class="jt-role">Manager · Accenture</span>
+            </div>
+          </div>
+          <div class="jt-stop" onclick="goTo('journey',1)">
+            <div class="jt-dot"></div>
+            <div class="jt-label">
+              <span class="jt-year">2020 – 2023</span>
+              <span class="jt-role">PM · Thoucentic</span>
+            </div>
+          </div>
+          <div class="jt-stop" onclick="goTo('journey',2)">
+            <div class="jt-dot"></div>
+            <div class="jt-label">
+              <span class="jt-year">2018 – 2019</span>
+              <span class="jt-role">Sr. Consultant</span>
+            </div>
+          </div>
+          <div class="jt-stop" onclick="goTo('journey',3)">
+            <div class="jt-dot"></div>
+            <div class="jt-label">
+              <span class="jt-year">2017 – 2018</span>
+              <span class="jt-role">City Manager</span>
+            </div>
+          </div>
+          <div class="jt-stop" onclick="goTo('journey',4)">
+            <div class="jt-dot"></div>
+            <div class="jt-label">
+              <span class="jt-year">Pre-2017</span>
+              <span class="jt-role">The beginning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-wrapper">
+        <div class="book" data-book-id="journey">
+
+          <div class="page page-green active">
+            <div class="pg-num">01 / 05</div>
+            <div class="pg-subtitle">Oct 2023 — Present · Bengaluru</div>
+            <div class="pg-title">Manager, Products</div>
+            <div class="pg-subtitle" style="margin-bottom:0.8rem">Accenture · Global Consumer Data Platform · Strategy &amp; Consulting</div>
+            <ul class="pg-bullets">
+              <li>Owned product strategy and roadmap for a globally deployed consumer data platform with 100K+ daily users — balancing scalability, performance, and regional brand needs.</li>
+              <li>Redesigned core message architecture: replaced 3× fanout with change-stream group completion tracking, cutting downstream message volume by 66%.</li>
+              <li>Defined and pitched Gen AI + Copilot adoption roadmap; influenced strategic investment priorities with senior leadership.</li>
+            </ul>
+            <span class="pg-award">🏆 Champion of the Quarter — Q1 2026, Q1 &amp; Q2 2025</span>
+          </div>
+
+          <div class="page page-peach">
+            <div class="pg-num">02 / 05</div>
+            <div class="pg-subtitle">Jan 2020 — Sept 2023 · Bengaluru</div>
+            <div class="pg-title">Product Manager</div>
+            <div class="pg-subtitle" style="margin-bottom:0.8rem">Thoucentic · CPG &amp; Pharma Clients · Product Consulting</div>
+            <ul class="pg-bullets">
+              <li>Drove product strategy for 100+ enterprise automation use-cases at a global FMCG — saved 180K+ hours yearly, improved operational efficiency by 40%.</li>
+              <li>Caught and corrected a critical volume assumption error mid-implementation; fast-tracked P0 design changes and delivered all critical features on SIT deadline.</li>
+              <li>Defined MVP for a pharma distribution platform from scratch; prioritised returns management as USP — launched across 5 cities, onboarding 50+ distributors.</li>
+            </ul>
+            <span class="pg-award">🏅 Certificate of Appreciation — Project Delivery</span>
+          </div>
+
+          <div class="page page-green">
+            <div class="pg-num">03 / 05</div>
+            <div class="pg-subtitle">Mar 2018 — Jul 2019 · Bengaluru</div>
+            <div class="pg-title">Senior Consultant</div>
+            <div class="pg-subtitle" style="margin-bottom:0.8rem">Strategy &amp; Market Research · Ride-Hailing &amp; eCommerce</div>
+            <ul class="pg-bullets">
+              <li>Led ride-hailing and eCommerce vertical — contributed ~15% of annual firm revenue; delivered product strategy and market insights that shaped client GTM decisions.</li>
+              <li>Co-authored a leading network report on the evolving EdTech sector in India.</li>
+            </ul>
+            <span class="pg-award">⭐ Best Performing Employee — first 6 months</span>
+            <span class="pg-award" style="margin-left:0.4rem;">🏅 Award for Delivery Excellence</span>
+          </div>
+
+          <div class="page page-peach">
+            <div class="pg-num">04 / 05</div>
+            <div class="pg-subtitle">Jul 2017 — Feb 2018 · Bengaluru</div>
+            <div class="pg-title">City Manager</div>
+            <div class="pg-subtitle" style="margin-bottom:0.8rem">Mobility Marketplace Startup</div>
+            <ul class="pg-bullets">
+              <li>Launched city operations; drove 100% MoM growth in transactions, onboarded 50+ vendors within 6 months.</li>
+              <li>Operated at the intersection of marketplace supply, vendors, and service delivery — first-hand exposure to operational tradeoffs at scale.</li>
+            </ul>
+          </div>
+
+          <div class="page page-mixed">
+            <div class="pg-num">05 / 05</div>
+            <div class="pg-subtitle">Pre-2017 · The beginning</div>
+            <div class="pg-title" style="font-size:1.6rem;">Earlier chapters</div>
+            <div class="pg-body">
+              Started as an <strong>Assistant Systems Engineer</strong> in Kochi — a foundation
+              in systems thinking before pivoting to business and product.<br/><br/>
+              Then moved to Chennai as a <strong>Business Consultant</strong> at a global IT firm,
+              managing feature rollout for a US-based wealth management platform.<br/><br/>
+              Completed an MBA — and never looked back.
+            </div>
+          </div>
+
+        </div>
+        <div class="book-nav">
+          <button class="book-btn" data-dir="-1" disabled>←</button>
+          <span class="book-counter">1 / 5</span>
+          <button class="book-btn" data-dir="1">→</button>
+        </div>
+        <div class="book-dots"></div>
+        <div class="kb-hint">← → arrow keys to flip</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ PRODUCTS — 4 pages ════════ -->
+  <div class="tab-panel" id="panel-products" data-book="products">
+    <div class="panel-inner">
+      <span class="section-tag tag-green">Shipped</span>
+      <h2 class="section-title">Products I've built.</h2>
+      <p class="section-sub">Five platforms, five contexts — flip through each one.</p>
+      <div class="book-wrapper">
+        <div class="book" data-book-id="products">
+
+          <div class="page page-green active">
+            <div class="pg-num">01 / 05</div>
+            <div class="pg-emoji">🏗️</div>
+            <div class="pg-title">Global Consumer Data Platform</div>
+            <div class="pg-subtitle">Enterprise · B2B SaaS · Global</div>
+            <div class="pg-body">
+              Globally deployed CDP serving 100K+ daily users across multiple brands.
+              Redesigned core message architecture to eliminate redundant 3× fanout —
+              replaced with change-stream group completion tracking, cutting downstream
+              volume by <strong>66%</strong> and enabling scalable integrations.
+            </div>
+            <span class="pg-badge badge-green">100K+ daily users · 66% msg reduction</span>
+          </div>
+
+          <div class="page page-peach">
+            <div class="pg-num">02 / 05</div>
+            <div class="pg-emoji">⚙️</div>
+            <div class="pg-title">Enterprise Automation Suite</div>
+            <div class="pg-subtitle">FMCG · RPA / AI Ops · Enterprise</div>
+            <div class="pg-body">
+              100+ automation use-cases deployed end-to-end for a global FMCG.
+              Defined scope, managed cross-functional delivery, and caught a critical
+              volume assumption error mid-implementation that would have broken SIT.
+              Drove <strong>40% operational efficiency improvement</strong>.
+            </div>
+            <span class="pg-badge badge-peach">180K+ hrs/yr saved · 40% efficiency gain</span>
+          </div>
+
+          <div class="page page-green">
+            <div class="pg-num">03 / 05</div>
+            <div class="pg-emoji">💊</div>
+            <div class="pg-title">Pharma Distribution Platform</div>
+            <div class="pg-subtitle">PharmaHealth SaaS · 0→1</div>
+            <div class="pg-body">
+              Built from zero. Made the unconventional call to prioritise returns
+              management as the core USP — an unfashionable bet that proved right.
+              Launched across <strong>5 cities</strong> with 50+ distributors onboarded
+              at MVP stage. First-ever product play in pharma distribution for the firm.
+            </div>
+            <span class="pg-badge badge-green">5-city launch · 50+ distributors</span>
+          </div>
+
+          <div class="page page-peach">
+            <div class="pg-num">04 / 05</div>
+            <div class="pg-emoji">🛒</div>
+            <div class="pg-title">B2B Commerce Marketplace</div>
+            <div class="pg-subtitle">FMCG Retail · B2B eCommerce · Multi-Region</div>
+            <div class="pg-body">
+              Developed a B2B commerce marketplace enabling FMCG retailers to place orders
+              directly — featuring split cart, MDM integration with SAP, and flexible payment
+              options. Two parallel builds: <strong>Magento</strong> for SEA and US markets,
+              <strong>in-house platform</strong> for EU. Post-MVP, expanded into European
+              markets with the custom stack.
+            </div>
+            <span class="pg-badge badge-peach">SEA + US (Magento) · EU (In-house) · SAP MDM</span>
+          </div>
+
+          <div class="page page-green">
+            <div class="pg-num">05 / 05</div>
+            <div class="pg-emoji">🤖</div>
+            <div class="pg-title">BD Intelligence Platform</div>
+            <div class="pg-subtitle">Accenture CGRT · AI Product · MVP · 2026</div>
+            <div class="pg-body">
+              Conceptualised, designed, and built an <strong>AI-powered proposal intelligence MVP</strong>
+              for a 200-person consulting practice — in <strong>10 days</strong>, zero cloud infra,
+              zero IT involvement, zero budget. Indexes past BD assets and surfaces them via
+              <strong>natural-language Smart Search</strong>, generates section-by-section RFP
+              storylines with confidence-scored matches, and exports
+              <strong>brand-compliant PowerPoints</strong> using the Accenture MasterBrand template.
+              <br/><br/>
+              Full PM lifecycle: 3-persona user research, 10-day sprint, 5-doc PRD,
+              20-prompt reproducibility guide, and a <strong>3-horizon roadmap</strong>
+              (lexical retrieval → semantic RAG → cross-practice federation).
+              Recognised at the CGRT Prompt-a-thon.
+            </div>
+            <span class="pg-badge badge-green">MVP · 4–8 hrs → &lt;2 min · 2,400 hrs/yr projected · Zero infra cost</span>
+          </div>
+
+        </div>
+        <div class="book-nav">
+          <button class="book-btn" data-dir="-1" disabled>←</button>
+          <span class="book-counter">1 / 5</span>
+          <button class="book-btn" data-dir="1">→</button>
+        </div>
+        <div class="book-dots"></div>
+        <div class="kb-hint">← → arrow keys to flip</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ SKILLS ════════ -->
+  <div class="tab-panel" id="panel-skills">
+    <div class="panel-inner">
+      <span class="section-tag tag-green">Toolkit</span>
+      <h2 class="section-title">Skills &amp; credentials.</h2>
+      <p class="section-sub">What I bring to the table — and the certs to back it up.</p>
+      <div class="skills-grid">
+
+        <!-- Product & Strategy -->
+        <div class="skill-block">
+          <div class="skill-label"><span class="skill-label-icon">&#9670;</span> Product &amp; Strategy</div>
+          <ul class="skill-list">
+            <li>Product Strategy &amp; Vision</li>
+            <li>Roadmap Ownership</li>
+            <li>Go-To-Market Strategy</li>
+            <li><strong>0→1 Product Builds</strong></li>
+            <li><strong>Platform Thinking</strong></li>
+            <li><strong>Technical Product Mgmt</strong></li>
+            <li>Metrics &amp; KPI Frameworks</li>
+            <li>Data-Informed Decisions</li>
+          </ul>
+        </div>
+
+        <!-- Execution & Delivery -->
+        <div class="skill-block">
+          <div class="skill-label"><span class="skill-label-icon">&#9670;</span> Execution &amp; Delivery</div>
+          <ul class="skill-list">
+            <li>Agile &amp; Scrum</li>
+            <li>Cross-Functional Leadership</li>
+            <li><strong>Growth &amp; Retention Loops</strong></li>
+            <li><strong>User Lifecycle Mgmt</strong></li>
+            <li><strong>Funnel Optimisation</strong></li>
+            <li>Exec Stakeholder Mgmt</li>
+            <li><strong>Rapid Prototyping</strong></li>
+            <li>Customer Experience</li>
+            <li><strong>Feature Flagging &amp; Rollout</strong></li>
+            <li><strong>Sprint Planning at Scale</strong></li>
+          </ul>
+        </div>
+
+        <!-- Domains -->
+        <div class="skill-block">
+          <div class="skill-label"><span class="skill-label-icon">&#9670;</span> Domains</div>
+          <ul class="skill-list single-col">
+            <li>Enterprise Data Platforms &amp; CDP</li>
+            <li>B2B SaaS &amp; Marketplaces</li>
+            <li>Automation / RPA / AI Ops</li>
+            <li>FMCG / Retail Tech Platforms</li>
+            <li>PharmaHealth SaaS</li>
+            <li>B2B Commerce &amp; eCommerce</li>
+          </ul>
+        </div>
+
+        <!-- Tools & Integrations -->
+        <div class="skill-block">
+          <div class="skill-label"><span class="skill-label-icon">&#9670;</span> Tools &amp; Integrations</div>
+          <ul class="skill-list single-col">
+            <li>GCP, Jira, Figma, UiPath</li>
+            <li>Magento (B2B Commerce)</li>
+            <li><strong>MDM / SAP integration</strong> (master data, order sync)</li>
+            <li>Google Project Management suite</li>
+          </ul>
+        </div>
+
+        <!-- Certifications -->
+        <div class="skill-block">
+          <div class="skill-label"><span class="skill-label-icon">&#9670;</span> Certifications</div>
+          <div class="cert-card">
+            <span class="cert-icon">☁️</span>
+            <div><div class="cert-name">Google Cloud Generative AI Leader</div><div class="cert-by">Google Cloud</div></div>
+          </div>
+          <div class="cert-card">
+            <span class="cert-icon">🔧</span>
+            <div><div class="cert-name">GCP Core Fundamentals</div><div class="cert-by">Google Cloud</div></div>
+          </div>
+          <div class="cert-card">
+            <span class="cert-icon">🤖</span>
+            <div><div class="cert-name">RPA Business Analyst</div><div class="cert-by">UiPath</div></div>
+          </div>
+          <div class="cert-card">
+            <span class="cert-icon">📋</span>
+            <div><div class="cert-name">Google Project Management</div><div class="cert-by">Google</div></div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="skill-block">
+          <div class="skill-label"><span class="skill-label-icon">&#9670;</span> Education</div>
+          <div class="edu-card">
+            <div class="edu-school">Indian Institute of Management, Rohtak</div>
+            <div class="edu-degree">PGDM — Marketing &amp; Finance · 2014–2016</div>
+            <span class="edu-badge">Top 15%ile · CAT 98.52 percentile</span>
+          </div>
+          <div class="edu-card">
+            <div class="edu-school">NSS College of Engineering, Palakkad</div>
+            <div class="edu-degree">B.Tech — Electronics &amp; Communication · 2008–2012</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ CONTACT ════════ -->
+  <div class="tab-panel" id="panel-contact">
+    <div class="panel-inner">
+      <div class="contact-inner">
+        <span class="section-tag tag-green">Get in touch</span>
+        <h2 class="section-title">Let's build something.</h2>
+        <p class="section-sub">Open to senior PM roles in B2B SaaS, data platforms, or AI products.</p>
+        <div class="contact-links">
+          <a href="mailto:anusha16oct@gmail.com" class="contact-link" onclick="window.location.href='mailto:anusha16oct@gmail.com'">✉️&nbsp; anusha16oct@gmail.com</a>
+          <a href="tel:+919447527405" class="contact-link" onclick="window.location.href='tel:+919447527405'">📞&nbsp; +91 94475 27405</a>
+          <a href="https://www.linkedin.com/in/anusha-p-krishnan-808861a4/" target="_blank" rel="noopener" class="contact-link">💼&nbsp; LinkedIn</a>
+        </div>
+        <p style="font-size:0.72rem;color:var(--muted);margin-top:1.2rem;">Clicking email opens your mail app · phone opens your dialer</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-journey">
+      <svg viewBox="0 0 1100 220" xmlns="http://www.w3.org/2000/svg" class="journey-svg">
+
+        <!-- Ground line -->
+        <line x1="20" y1="195" x2="1080" y2="195" stroke="#2D6A5A" stroke-width="1" stroke-dasharray="6,4" opacity="0.2"/>
+
+        <!-- Stepping stones -->
+        <circle cx="160" cy="195" r="2" fill="#2D6A5A" opacity="0.25"/>
+        <circle cx="320" cy="195" r="2" fill="#2D6A5A" opacity="0.25"/>
+        <circle cx="500" cy="195" r="2" fill="#2D6A5A" opacity="0.25"/>
+        <circle cx="680" cy="195" r="2" fill="#2D6A5A" opacity="0.25"/>
+        <circle cx="850" cy="195" r="2" fill="#2D6A5A" opacity="0.25"/>
+
+        <!-- ═══ 1: COLLEGE — backpack + book ═══ -->
+        <g transform="translate(70,24)" class="fig-float" data-base-x="70" data-base-y="24">
+          <!-- Hair -->
+          <path d="M -8 8 Q -12 0 -4 -2 Q 4 -4 8 0 Q 12 4 10 12 L 12 30 Q 14 40 10 36 L 8 12" fill="#1A3C34"/>
+          <path d="M -8 8 L -10 32 Q -14 42 -10 36" fill="#1A3C34" opacity="0.7"/>
+          <!-- Head -->
+          <circle cx="0" cy="12" r="12" fill="#A8C5BB"/>
+          <!-- Eyes -->
+          <ellipse cx="-4" cy="11" rx="1.8" ry="2" fill="#1A3C34"/>
+          <ellipse cx="4" cy="11" rx="1.8" ry="2" fill="#1A3C34"/>
+          <circle cx="-3.5" cy="10" r="0.7" fill="#fff"/>
+          <circle cx="4.5" cy="10" r="0.7" fill="#fff"/>
+          <!-- Smile -->
+          <path d="M -3 15 Q 0 18 3 15" fill="none" stroke="#1A3C34" stroke-width="0.8" stroke-linecap="round"/>
+          <!-- Neck -->
+          <rect x="-3" y="23" width="6" height="6" rx="2" fill="#A8C5BB"/>
+          <!-- Top -->
+          <path d="M -10 29 L -12 72 Q 0 76 12 72 L 10 29 Z" fill="#2D6A5A"/>
+          <path d="M -5 29 L 0 36 L 5 29" fill="none" stroke="#D4E8E0" stroke-width="0.8"/>
+          <!-- Arms -->
+          <line x1="-10" y1="36" x2="-18" y2="54" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="10" y1="36" x2="18" y2="52" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Book -->
+          <rect x="16" y="50" width="7" height="9" rx="1" fill="#1A3C34" opacity="0.5"/>
+          <!-- Skirt -->
+          <path d="M -12 72 L -14 120 Q 0 122 14 120 L 12 72 Z" fill="#1A3C34" opacity="0.55"/>
+          <!-- Legs -->
+          <line x1="-5" y1="120" x2="-7" y2="150" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="5" y1="120" x2="7" y2="150" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <ellipse cx="-7" cy="153" rx="5" ry="3" fill="#1A3C34"/>
+          <ellipse cx="7" cy="153" rx="5" ry="3" fill="#1A3C34"/>
+          <!-- Backpack -->
+          <rect x="-20" y="34" width="8" height="16" rx="3" fill="#1A3C34" opacity="0.4"/>
+          <text x="0" y="174" text-anchor="middle" font-size="9.5" fill="#2D6A5A" font-family="DM Sans" font-weight="400">College</text>
+        </g>
+
+        <!-- ═══ 2: FIRST JOB — laptop ═══ -->
+        <g transform="translate(260,20)" class="fig-float" data-base-x="260" data-base-y="20">
+          <!-- Hair -->
+          <path d="M -9 6 Q -12 -2 -2 -4 Q 6 -5 10 0 Q 13 5 10 14 L 10 32 Q 8 38 6 32" fill="#1A3C34"/>
+          <path d="M -9 6 L -10 34 Q -12 40 -8 34" fill="#1A3C34" opacity="0.7"/>
+          <!-- Head -->
+          <circle cx="0" cy="12" r="12" fill="#A8C5BB"/>
+          <!-- Eyes -->
+          <ellipse cx="-4" cy="11" rx="1.8" ry="2" fill="#1A3C34"/>
+          <ellipse cx="4" cy="11" rx="1.8" ry="2" fill="#1A3C34"/>
+          <circle cx="-3.5" cy="10" r="0.7" fill="#fff"/>
+          <circle cx="4.5" cy="10" r="0.7" fill="#fff"/>
+          <!-- Smile -->
+          <path d="M -3 15 Q 0 18 3 15" fill="none" stroke="#1A3C34" stroke-width="0.8" stroke-linecap="round"/>
+          <!-- Neck -->
+          <rect x="-3" y="23" width="6" height="6" rx="2" fill="#A8C5BB"/>
+          <!-- Blouse -->
+          <path d="M -10 29 L -11 74 Q 0 78 11 74 L 10 29 Z" fill="#2D6A5A" opacity="0.8"/>
+          <!-- Blazer -->
+          <path d="M -12 29 L -13 74 L -5 74 L -4 32 Z" fill="#1A3C34" opacity="0.45"/>
+          <path d="M 12 29 L 13 74 L 5 74 L 4 32 Z" fill="#1A3C34" opacity="0.45"/>
+          <!-- Arms -->
+          <line x1="-10" y1="36" x2="-18" y2="52" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="10" y1="36" x2="18" y2="52" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Laptop -->
+          <rect x="-12" y="50" width="14" height="9" rx="2" fill="#1A3C34" opacity="0.6"/>
+          <rect x="-9" y="52" width="8" height="4" rx="1" fill="#2D6A5A" opacity="0.4"/>
+          <!-- Trousers -->
+          <path d="M -11 74 L -12 126 L -2 126 L 0 78 Z" fill="#1A3C34" opacity="0.45"/>
+          <path d="M 11 74 L 12 126 L 2 126 L 0 78 Z" fill="#1A3C34" opacity="0.45"/>
+          <!-- Legs -->
+          <line x1="-6" y1="126" x2="-6" y2="154" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="6" y1="126" x2="6" y2="154" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <ellipse cx="-6" cy="157" rx="5" ry="3" fill="#1A3C34"/>
+          <ellipse cx="6" cy="157" rx="5" ry="3" fill="#1A3C34"/>
+          <text x="0" y="178" text-anchor="middle" font-size="9.5" fill="#2D6A5A" font-family="DM Sans" font-weight="400">First job</text>
+        </g>
+
+        <!-- ═══ 3: MBA — grad cap celebrating ═══ -->
+        <g transform="translate(460,14)" class="fig-float" data-base-x="460" data-base-y="14">
+          <!-- Hair -->
+          <path d="M -9 6 Q -12 -2 -2 -4 Q 6 -5 10 0 Q 14 6 10 14" fill="#1A3C34"/>
+          <path d="M -9 6 L -10 34 Q -12 42 -8 36" fill="#1A3C34" opacity="0.6"/>
+          <!-- Head -->
+          <circle cx="0" cy="12" r="13" fill="#A8C5BB"/>
+          <!-- Eyes (happy, celebrating) -->
+          <ellipse cx="-4" cy="11" rx="1.8" ry="2" fill="#1A3C34"/>
+          <ellipse cx="4" cy="11" rx="1.8" ry="2" fill="#1A3C34"/>
+          <circle cx="-3.5" cy="10" r="0.7" fill="#fff"/>
+          <circle cx="4.5" cy="10" r="0.7" fill="#fff"/>
+          <!-- Big smile -->
+          <path d="M -4 15 Q 0 20 4 15" fill="none" stroke="#1A3C34" stroke-width="0.9" stroke-linecap="round"/>
+          <!-- Grad cap -->
+          <rect x="-14" y="-2" width="28" height="4" rx="1" fill="#1A3C34"/>
+          <polygon points="-12,-2 12,-2 8,-7 -8,-7" fill="#1A3C34"/>
+          <line x1="12" y1="-4" x2="18" y2="4" stroke="#E8A838" stroke-width="1.2"/>
+          <circle cx="18" cy="6" r="2" fill="#E8A838"/>
+          <!-- Neck -->
+          <rect x="-3" y="24" width="6" height="6" rx="2" fill="#A8C5BB"/>
+          <!-- Gown -->
+          <path d="M -11 30 L -14 80 Q 0 86 14 80 L 11 30 Z" fill="#2D6A5A"/>
+          <!-- Arms raised -->
+          <line x1="-11" y1="38" x2="-22" y2="18" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="11" y1="38" x2="22" y2="18" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Scroll -->
+          <rect x="20" y="12" width="4" height="12" rx="2" fill="#FDF6E3" stroke="#E8A838" stroke-width="0.8"/>
+          <!-- Skirt -->
+          <path d="M -14 80 L -16 130 Q 0 134 16 130 L 14 80 Z" fill="#1A3C34" opacity="0.45"/>
+          <!-- Legs -->
+          <line x1="-6" y1="130" x2="-6" y2="158" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="6" y1="130" x2="6" y2="158" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <ellipse cx="-6" cy="161" rx="5" ry="3" fill="#1A3C34"/>
+          <ellipse cx="6" cy="161" rx="5" ry="3" fill="#1A3C34"/>
+          <!-- Sparkles -->
+          <text x="-26" y="14" font-size="11" fill="#E8A838" class="sparkle-pulse">✧</text>
+          <text x="28" y="8" font-size="9" fill="#E8A838" class="sparkle-pulse">✦</text>
+          <text x="0" y="182" text-anchor="middle" font-size="9.5" fill="#2D6A5A" font-family="DM Sans" font-weight="400">IIM MBA</text>
+        </g>
+
+        <!-- ═══ 4: WOMAN + BABY ═══ -->
+        <g transform="translate(650,20)" class="fig-float" data-base-x="650" data-base-y="20">
+          <!-- Hair -->
+          <path d="M -9 6 Q -12 -2 -2 -4 Q 6 -5 10 0 Q 14 6 10 14" fill="#1A3C34"/>
+          <path d="M 8 8 Q 16 6 14 20 Q 12 28 8 22" fill="#1A3C34" opacity="0.6"/>
+          <!-- Head -->
+          <circle cx="0" cy="12" r="12" fill="#A8C5BB"/>
+          <!-- Eyes (gentle, looking down at baby) -->
+          <path d="M -5.5 11 Q -4 9.5 -2.5 11" fill="none" stroke="#1A3C34" stroke-width="1" stroke-linecap="round"/>
+          <path d="M 2.5 11 Q 4 9.5 5.5 11" fill="none" stroke="#1A3C34" stroke-width="1" stroke-linecap="round"/>
+          <!-- Gentle smile -->
+          <path d="M -3 15 Q 0 18 3 15" fill="none" stroke="#1A3C34" stroke-width="0.8" stroke-linecap="round"/>
+          <!-- Neck -->
+          <rect x="-3" y="23" width="6" height="6" rx="2" fill="#A8C5BB"/>
+          <!-- Body -->
+          <path d="M -10 29 L -11 76 Q 0 80 11 76 L 10 29 Z" fill="#2D6A5A" opacity="0.75"/>
+          <!-- Left arm cradling -->
+          <path d="M -10 36 Q -20 48 -18 56 Q -16 62 -8 60" fill="none" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Right arm supporting -->
+          <path d="M 10 36 Q 4 50 -2 58" fill="none" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Baby bundle -->
+          <ellipse cx="-8" cy="54" rx="10" ry="7" fill="#D4E8E0"/>
+          <!-- Baby head -->
+          <circle cx="-12" cy="48" r="6" fill="#A8C5BB"/>
+          <!-- Baby hair tuft -->
+          <path d="M -14 43 Q -12 40 -10 43" fill="#1A3C34"/>
+          <!-- Baby closed eyes -->
+          <path d="M -14 48 Q -13 47 -12 48" fill="none" stroke="#1A3C34" stroke-width="0.8" stroke-linecap="round"/>
+          <path d="M -12 48 Q -11 47 -10 48" fill="none" stroke="#1A3C34" stroke-width="0.8" stroke-linecap="round"/>
+          <!-- Baby smile -->
+          <path d="M -13 50 Q -12 51 -11 50" fill="none" stroke="#1A3C34" stroke-width="0.5" stroke-linecap="round"/>
+          <!-- Heart -->
+          <g class="sparkle-pulse">
+            <path d="M -22 36 Q -22 33 -20 33 Q -18 33 -18 36 Q -18 33 -16 33 Q -14 33 -14 36 Q -14 40 -18 42 Q -22 40 -22 36 Z" fill="#E8A838" opacity="0.3"/>
+          </g>
+          <!-- Skirt -->
+          <path d="M -11 76 L -13 126 Q 0 130 13 126 L 11 76 Z" fill="#1A3C34" opacity="0.45"/>
+          <!-- Legs -->
+          <line x1="-5" y1="126" x2="-5" y2="154" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="5" y1="126" x2="5" y2="154" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <ellipse cx="-5" cy="157" rx="5" ry="3" fill="#1A3C34"/>
+          <ellipse cx="5" cy="157" rx="5" ry="3" fill="#1A3C34"/>
+          <text x="-2" y="178" text-anchor="middle" font-size="9.5" fill="#2D6A5A" font-family="DM Sans" font-weight="400">New life</text>
+        </g>
+
+        <!-- ═══ 5: WOMAN + TODDLER ═══ -->
+        <g transform="translate(840,16)" class="fig-float" data-base-x="840" data-base-y="16">
+          <!-- Hair -->
+          <path d="M -9 6 Q -12 -2 -2 -4 Q 6 -5 10 0 Q 14 6 10 14" fill="#1A3C34"/>
+          <path d="M -9 6 L -10 30 Q -12 36 -8 32" fill="#1A3C34" opacity="0.6"/>
+          <!-- Head -->
+          <circle cx="0" cy="12" r="12" fill="#A8C5BB"/>
+          <!-- Eyes -->
+          <ellipse cx="-4" cy="11" rx="1.8" ry="2" fill="#1A3C34"/>
+          <ellipse cx="4" cy="11" rx="1.8" ry="2" fill="#1A3C34"/>
+          <circle cx="-3.5" cy="10" r="0.7" fill="#fff"/>
+          <circle cx="4.5" cy="10" r="0.7" fill="#fff"/>
+          <!-- Smile -->
+          <path d="M -3 15 Q 0 18 3 15" fill="none" stroke="#1A3C34" stroke-width="0.8" stroke-linecap="round"/>
+          <!-- Neck -->
+          <rect x="-3" y="23" width="6" height="6" rx="2" fill="#A8C5BB"/>
+          <!-- Top -->
+          <path d="M -10 29 L -11 74 Q 0 78 11 74 L 10 29 Z" fill="#2D6A5A" opacity="0.8"/>
+          <!-- Blazer sides -->
+          <path d="M -12 29 L -13 74 L -5 74 L -4 32 Z" fill="#1A3C34" opacity="0.4"/>
+          <path d="M 12 29 L 13 74 L 5 74 L 4 32 Z" fill="#1A3C34" opacity="0.4"/>
+          <!-- Left arm to toddler -->
+          <line x1="-10" y1="36" x2="-26" y2="68" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Right arm with bag -->
+          <line x1="10" y1="36" x2="18" y2="52" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <rect x="16" y="48" width="5" height="9" rx="1.5" fill="#1A3C34" opacity="0.4"/>
+          <!-- Trousers -->
+          <path d="M -11 74 L -12 126 L -2 126 L 0 78 Z" fill="#1A3C34" opacity="0.4"/>
+          <path d="M 11 74 L 12 126 L 2 126 L 0 78 Z" fill="#1A3C34" opacity="0.4"/>
+          <!-- Legs -->
+          <line x1="-6" y1="126" x2="-9" y2="156" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="6" y1="126" x2="9" y2="156" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <ellipse cx="-9" cy="159" rx="5" ry="3" fill="#1A3C34"/>
+          <ellipse cx="9" cy="159" rx="5" ry="3" fill="#1A3C34"/>
+
+          <!-- TODDLER -->
+          <g transform="translate(-34,62)" class="fig-sway" data-base-x="-34" data-base-y="62">
+            <circle cx="0" cy="10" r="9" fill="#A8C5BB"/>
+            <!-- Toddler eyes -->
+            <ellipse cx="-3" cy="9" rx="1.5" ry="1.8" fill="#1A3C34"/>
+            <ellipse cx="3" cy="9" rx="1.5" ry="1.8" fill="#1A3C34"/>
+            <circle cx="-2.5" cy="8.2" r="0.6" fill="#fff"/>
+            <circle cx="3.5" cy="8.2" r="0.6" fill="#fff"/>
+            <!-- Toddler smile -->
+            <path d="M -2 13 Q 0 15 2 13" fill="none" stroke="#1A3C34" stroke-width="0.7" stroke-linecap="round"/>
+            <!-- Hair + pigtails -->
+            <path d="M -9 6 Q -8 0 0 -2 Q 8 0 9 6" fill="#1A3C34"/>
+            <circle cx="-8" cy="4" r="3.5" fill="#1A3C34"/>
+            <circle cx="8" cy="4" r="3.5" fill="#1A3C34"/>
+            <!-- Neck -->
+            <rect x="-2" y="18" width="4" height="4" rx="1.5" fill="#A8C5BB"/>
+            <!-- Dress -->
+            <path d="M -7 22 L -9 48 Q 0 52 9 48 L 7 22 Z" fill="#D4E8E0"/>
+            <!-- Arms -->
+            <line x1="7" y1="28" x2="14" y2="20" stroke="#A8C5BB" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="-7" y1="28" x2="-10" y2="38" stroke="#A8C5BB" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- Legs -->
+            <line x1="-3" y1="48" x2="-5" y2="68" stroke="#A8C5BB" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="3" y1="48" x2="5" y2="68" stroke="#A8C5BB" stroke-width="2.5" stroke-linecap="round"/>
+            <ellipse cx="-5" cy="70" rx="4" ry="2.5" fill="#1A3C34"/>
+            <ellipse cx="5" cy="70" rx="4" ry="2.5" fill="#1A3C34"/>
+          </g>
+          <text x="-10" y="180" text-anchor="middle" font-size="9.5" fill="#2D6A5A" font-family="DM Sans" font-weight="400">Building</text>
+        </g>
+
+        <!-- ═══ 6: TODAY — power pose ═══ -->
+        <g transform="translate(1020,10)" class="fig-float" data-base-x="1020" data-base-y="10">
+          <!-- Hair -->
+          <path d="M -9 6 Q -14 -4 -2 -6 Q 8 -6 12 0 Q 16 8 12 16" fill="#1A3C34"/>
+          <path d="M 10 10 Q 20 8 18 26 Q 16 34 12 26" fill="#1A3C34" opacity="0.7"/>
+          <path d="M -9 6 L -12 32 Q -14 40 -10 34" fill="#1A3C34" opacity="0.5"/>
+          <!-- Head -->
+          <circle cx="0" cy="12" r="13" fill="#A8C5BB"/>
+          <!-- Eyes (confident) -->
+          <ellipse cx="-4" cy="11" rx="2" ry="2.2" fill="#1A3C34"/>
+          <ellipse cx="5" cy="11" rx="2" ry="2.2" fill="#1A3C34"/>
+          <circle cx="-3.5" cy="9.8" r="0.8" fill="#fff"/>
+          <circle cx="5.5" cy="9.8" r="0.8" fill="#fff"/>
+          <!-- Confident smile -->
+          <path d="M -3 16 Q 0 19 3 16" fill="none" stroke="#1A3C34" stroke-width="0.9" stroke-linecap="round"/>
+          <!-- Neck -->
+          <rect x="-3" y="24" width="6" height="6" rx="2" fill="#A8C5BB"/>
+          <!-- Blazer -->
+          <path d="M -12 30 L -14 82 Q 0 86 14 82 L 12 30 Z" fill="#1A3C34" opacity="0.85"/>
+          <!-- V-neck -->
+          <path d="M -5 30 L 0 42 L 5 30" fill="none" stroke="#E8A838" stroke-width="1"/>
+          <!-- Arms (hands on hips) -->
+          <line x1="-12" y1="38" x2="-22" y2="54" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="-22" y1="54" x2="-14" y2="64" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="12" y1="38" x2="22" y2="54" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="22" y1="54" x2="14" y2="64" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- Trousers -->
+          <path d="M -14 82 L -15 136 L -3 136 L 0 86 Z" fill="#1A3C34" opacity="0.55"/>
+          <path d="M 14 82 L 15 136 L 3 136 L 0 86 Z" fill="#1A3C34" opacity="0.55"/>
+          <!-- Legs -->
+          <line x1="-8" y1="136" x2="-8" y2="160" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="8" y1="136" x2="8" y2="160" stroke="#A8C5BB" stroke-width="3.5" stroke-linecap="round"/>
+          <ellipse cx="-8" cy="163" rx="5" ry="3" fill="#1A3C34"/>
+          <ellipse cx="8" cy="163" rx="5" ry="3" fill="#1A3C34"/>
+          <!-- Sparkles -->
+          <text x="26" y="6" font-size="14" fill="#E8A838" class="sparkle-pulse">✦</text>
+          <text x="-28" y="16" font-size="10" fill="#E8A838" class="sparkle-pulse">✧</text>
+          <text x="22" y="30" font-size="9" fill="#E8A838" class="sparkle-pulse">✦</text>
+          <text x="0" y="184" text-anchor="middle" font-size="10" fill="#1A3C34" font-weight="600" font-family="DM Sans">Today</text>
+        </g>
+
+      </svg>
+    </div>
+    <div style="margin-top:0.8rem;">&copy; 2026 Anusha P Krishnan &mdash; Bengaluru, India</div>
+  </footer>
+
+  <script>
+    /* ══════ BOOK ENGINE ══════ */
+    const books = {};
+    let flipping = false; // prevent double-clicks during animation
+
+    function initBooks() {
+      document.querySelectorAll('.book').forEach(bookEl => {
+        const id = bookEl.dataset.bookId;
+        const pages = Array.from(bookEl.querySelectorAll('.page'));
+        const wrapper = bookEl.closest('.book-wrapper');
+        const nav = wrapper.querySelector('.book-nav');
+        const counter = nav.querySelector('.book-counter');
+        const prevBtn = nav.querySelector('[data-dir="-1"]');
+        const nextBtn = nav.querySelector('[data-dir="1"]');
+        const dotsEl = wrapper.querySelector('.book-dots');
+
+        // Set container min-height from first page
+        setTimeout(() => {
+          const h = pages[0].offsetHeight;
+          if (h > 0) bookEl.style.minHeight = h + 'px';
+        }, 50);
+
+        // Build dots
+        dotsEl.innerHTML = '';
+        pages.forEach((_, i) => {
+          const dot = document.createElement('span');
+          dot.className = 'book-dot' + (i === 0 ? ' active' : '');
+          dot.onclick = () => goTo(id, i);
+          dotsEl.appendChild(dot);
+        });
+
+        prevBtn.onclick = () => flip(id, -1);
+        nextBtn.onclick = () => flip(id, 1);
+
+        books[id] = { current: 0, total: pages.length, pages, counter, prevBtn, nextBtn, dotsEl, el: bookEl };
+      });
+    }
+
+    function cleanPage(pg) {
+      pg.classList.remove('active', 'anim-flip-out-left', 'anim-flip-out-right',
+                          'anim-enter-from-right', 'anim-enter-from-left');
+      pg.style.animation = 'none';
+      pg.offsetHeight; // force reflow
+      pg.style.animation = '';
+    }
+
+    function flip(bookId, dir) {
+      if (flipping) return;
+      const b = books[bookId];
+      const next = b.current + dir;
+      if (next < 0 || next >= b.total) return;
+
+      flipping = true;
+
+      const cur = b.pages[b.current];
+      const tgt = b.pages[next];
+
+      // Clean any leftover animation classes
+      cleanPage(cur);
+      cleanPage(tgt);
+
+      // Animate out current page
+      cur.classList.remove('active');
+      cur.classList.add(dir > 0 ? 'anim-flip-out-left' : 'anim-flip-out-right');
+
+      // Animate in target page
+      tgt.classList.add('active', dir > 0 ? 'anim-enter-from-right' : 'anim-enter-from-left');
+
+      // Update container height
+      setTimeout(() => {
+        const h = tgt.offsetHeight;
+        if (h > 0) b.el.style.minHeight = h + 'px';
+      }, 100);
+
+      // Cleanup after animation completes
+      setTimeout(() => {
+        cleanPage(cur);
+        tgt.classList.remove('anim-enter-from-right', 'anim-enter-from-left');
+        flipping = false;
+      }, 650);
+
+      b.current = next;
+      updateUI(bookId);
+    }
+
+    function goTo(bookId, idx) {
+      if (flipping) return;
+      const b = books[bookId];
+      if (idx === b.current) return;
+      const dir = idx > b.current ? 1 : -1;
+      // Step to target (animate one flip)
+      flipping = true;
+      const cur = b.pages[b.current];
+      const tgt = b.pages[idx];
+
+      cleanPage(cur);
+      cleanPage(tgt);
+
+      cur.classList.remove('active');
+      cur.classList.add(dir > 0 ? 'anim-flip-out-left' : 'anim-flip-out-right');
+      tgt.classList.add('active', dir > 0 ? 'anim-enter-from-right' : 'anim-enter-from-left');
+
+      setTimeout(() => {
+        const h = tgt.offsetHeight;
+        if (h > 0) b.el.style.minHeight = h + 'px';
+      }, 100);
+
+      setTimeout(() => {
+        cleanPage(cur);
+        tgt.classList.remove('anim-enter-from-right', 'anim-enter-from-left');
+        flipping = false;
+      }, 650);
+
+      b.current = idx;
+      updateUI(bookId);
+    }
+
+    function updateUI(bookId) {
+      const b = books[bookId];
+      b.counter.textContent = (b.current + 1) + ' / ' + b.total;
+      b.prevBtn.disabled = b.current === 0;
+      b.nextBtn.disabled = b.current === b.total - 1;
+      b.dotsEl.querySelectorAll('.book-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === b.current);
+      });
+
+      // Sync journey timeline strip
+      if (bookId === 'journey') {
+        const stops = document.querySelectorAll('.jt-stop');
+        stops.forEach((stop, i) => {
+          stop.classList.remove('active', 'visited');
+          if (i === b.current) stop.classList.add('active');
+          else if (i < b.current) stop.classList.add('visited');
+        });
+        const progress = document.getElementById('jt-progress');
+        if (progress) {
+          // bg-line spans from 10% to 90% of container (80% total)
+          // each step = 80% / (total-1)
+          const pct = b.total <= 1 ? 0 : (b.current / (b.total - 1)) * 80;
+          progress.style.width = pct + '%';
+        }
+      }
+    }
+
+    /* ══════ TAB SWITCHING ══════ */
+    const tabNames = ['impact', 'journey', 'products', 'skills', 'contact'];
+
+    function switchTab(id) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+      document.getElementById('panel-' + id).classList.add('active');
+      const idx = tabNames.indexOf(id);
+      if (idx >= 0) document.querySelectorAll('.tab-btn')[idx].classList.add('active');
+
+      // Recalculate book height for this tab
+      const panel = document.getElementById('panel-' + id);
+      const bookEl = panel.querySelector('.book');
+      if (bookEl) {
+        const bookId = bookEl.dataset.bookId;
+        if (books[bookId]) {
+          const activePg = books[bookId].pages[books[bookId].current];
+          setTimeout(() => {
+            const h = activePg.offsetHeight;
+            if (h > 0) bookEl.style.minHeight = h + 'px';
+          }, 50);
+        }
+      }
+
+      document.getElementById('tabBar').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    /* ══════ KEYBOARD NAV ══════ */
+    document.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      const activePanel = document.querySelector('.tab-panel.active[data-book]');
+      if (!activePanel) return;
+      const bookId = activePanel.dataset.book;
+      if (books[bookId]) flip(bookId, e.key === 'ArrowRight' ? 1 : -1);
+    });
+
+    initBooks();
+
+    /* ══════ FOOTER FIGURE ANIMATIONS (JS for reliability) ══════ */
+    (function() {
+      const figures = document.querySelectorAll('.fig-float');
+      const swayers = document.querySelectorAll('.fig-sway');
+      const sparkles = document.querySelectorAll('.sparkle-pulse');
+
+      // Each figure bobs gently with a unique speed & phase offset
+      const speeds = [2.8, 3.0, 3.3, 2.6, 3.5, 3.1];
+      const amp = 5; // pixels of vertical bob
+
+      function animate(t) {
+        figures.forEach((fig, i) => {
+          const bx = parseFloat(fig.dataset.baseX);
+          const by = parseFloat(fig.dataset.baseY);
+          const phase = i * 1.1; // offset each figure
+          const dy = Math.sin((t / 1000) * (2 * Math.PI / (speeds[i] || 3)) + phase) * amp;
+          fig.setAttribute('transform', 'translate(' + bx + ',' + (by + dy) + ')');
+        });
+
+        swayers.forEach((s) => {
+          const bx = parseFloat(s.dataset.baseX);
+          const by = parseFloat(s.dataset.baseY);
+          const dx = Math.sin(t / 1000 * 1.5) * 1.5;
+          s.setAttribute('transform', 'translate(' + (bx + dx) + ',' + by + ')');
+        });
+
+        sparkles.forEach((sp, i) => {
+          const o = 0.3 + 0.7 * Math.abs(Math.sin(t / 1000 * 1.8 + i));
+          sp.setAttribute('opacity', o);
+        });
+
+        requestAnimationFrame(animate);
+      }
+      requestAnimationFrame(animate);
+    })();
+  </script>
+</body>
+</html>
